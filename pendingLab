@@ -1,0 +1,73 @@
+<component>
+    <section>
+        <templateId root = "2.16.840.1.113883.10.20.22.2.3.1"/>
+        <code code = "30954-2" codeSystem = "2.16.840.1.113883.6.1" codeSystemName = "LOINC" displayName = "RESULTS"/>
+        <title>RESULTS</title>
+        <text>
+            <table border = "1" width = "100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Actual Result</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <content ID = "result1">HGB, [LOINC: 30313-1]</content>
+                        </td>
+                        <td>14.2</td>
+                        <td>8/6/2012</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <content ID = "result5">Sputum Culture, [LOINC: 6460-0]</content>
+                        </td>
+                        <td>Pending</td>
+                        <td>8/6/2012</td>
+                    </tr>
+                </tbody>
+            </table>
+        </text>
+        <entry typeCode = "DRIV">
+            <organizer classCode = "BATTERY" moodCode = "EVN">
+                <templateId root = "2.16.840.1.113883.10.20.22.4.1"/>
+                <id root = "7d5a02b0-67a4-11db-bd13-0800200c9a66"/>
+                <code xsi:type = "CE" code = "57021-8" displayName = "CBC W Auto Differential panel in Blood" codeSystemName = "LOINC" codeSystem = "2.16.840.1.113883.6.1"/>
+                <statusCode code = "active"/>
+                <component>
+                    <observation classCode = "OBS" moodCode = "EVN">
+                        <templateId root = "2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root = "107c2dc0-67a5-11db-bd13-0800200c9a66"/>
+                        <code displayName = "Hemoglobin [Mass/volume] in Arterial blood" code = "30313-1" codeSystem = "2.16.840.1.113883.6.1">
+                            <originalText>
+                                <reference value = "#result1"/>
+                            </originalText>
+                        </code>
+                        <text>
+                            <reference value = "#result1"/>
+                        </text>
+                        <statusCode code = "completed"/>
+                        <effectiveTime value = "20120806"/>
+                        <value xsi:type = "PQ" unit = "g/dl " value = "14.2"/>
+                        <interpretationCode code = "N" codeSystem = "2.16.840.1.113883.5.83"/>
+                    </observation>
+                </component>
+                <component>
+                    <observation classCode = "OBS" moodCode = "EVN">
+                        <templateId root = "2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root = "68762391-bfa5-4dfa-9f6f-d37109a97d19"/>
+                        <code xsi:type = "CE" code = "6460-0" displayName = "Sputum Culture" codeSystem = "2.16.840.1.113883.6.1" codeSystemName = "LOINC"/>
+                        <text>
+                            <reference value = "#result5"/>
+                        </text>
+                        <statusCode code = "active"/>
+                        <effectiveTime value = "20120806"/>
+                        <value xsi:type = "ST">Pending</value>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+    </section>
+</component>
