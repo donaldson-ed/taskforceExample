@@ -24,6 +24,7 @@
                         <td>
                             <content ID = "result5">Sputum Culture, [LOINC: 6460-0]</content>
                         </td>
+                        <!-- Representation of the pending test in the narrative section -->
                         <td>Pending</td>
                         <td>8/6/2012</td>
                     </tr>
@@ -35,6 +36,7 @@
                 <templateId root = "2.16.840.1.113883.10.20.22.4.1"/>
                 <id root = "7d5a02b0-67a4-11db-bd13-0800200c9a66"/>
                 <code xsi:type = "CE" code = "57021-8" displayName = "CBC W Auto Differential panel in Blood" codeSystemName = "LOINC" codeSystem = "2.16.840.1.113883.6.1"/>
+                        <!-- Status is active since all components are not complete -->
                 <statusCode code = "active"/>
                 <component>
                     <observation classCode = "OBS" moodCode = "EVN">
@@ -48,8 +50,10 @@
                         <text>
                             <reference value = "#result1"/>
                         </text>
+                        <!-- Status of this test is completed -->
                         <statusCode code = "completed"/>
                         <effectiveTime value = "20120806"/>
+                        <!-- Represents a completed result reported as structured data -->
                         <value xsi:type = "PQ" unit = "g/dl " value = "14.2"/>
                         <interpretationCode code = "N" codeSystem = "2.16.840.1.113883.5.83"/>
                     </observation>
@@ -62,8 +66,10 @@
                         <text>
                             <reference value = "#result5"/>
                         </text>
+                        <!-- Status of this test is active -->
                         <statusCode code = "active"/>
                         <effectiveTime value = "20120806"/>
+                        <!-- Represents a uncompleted result reported as an unstructured string-->
                         <value xsi:type = "ST">Pending</value>
                     </observation>
                 </component>
