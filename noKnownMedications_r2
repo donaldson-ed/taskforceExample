@@ -2,9 +2,9 @@
 <component>
     <section>
         <!-- conforms to Medications section with entries optional -->
-        <templateId root="2.16.840.1.113883.10.20.22.2.1"/>
+        <templateId root="2.16.840.1.113883.10.20.22.2.1.2"/>
         <!-- Medications section with entries required -->
-        <templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+        <templateId root="2.16.840.1.113883.10.20.22.2.1.1.2"/>
         <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
             displayName="HISTORY OF MEDICATION USE"/>
         <title>MEDICATIONS</title>
@@ -12,7 +12,7 @@
         <entry>
             <!-- Act.actionNegationInd -->
             <substanceAdministration moodCode="EVN" classCode="SBADM" negationInd="true">
-                <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+                <templateId root="2.16.840.1.113883.10.20.22.4.16.2"/>
                 <!-- ** MEDICATION ACTIVITY -->
                 <id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66"/>
                 <statusCode code="active"/>
@@ -20,7 +20,7 @@
                 <effectiveTime nullFlavor="NA"/>
                 <consumable>
                     <manufacturedProduct classCode="MANU">
-                        <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                        <templateId root="2.16.840.1.113883.10.20.22.4.23.2"/>
                         <manufacturedMaterial>
                             <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.88"> 
                                 <translation code="410942007" displayName="drug or medication"
