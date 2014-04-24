@@ -27,7 +27,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <content ID = "result5">Sputum Culture, [LOINC: 6460-0]</content>
+                            <content ID = "result5">Leukocytes [#/​volume] in Blood by Manual count [LOINC: 804-5]</content>
                         </td>
                         <!-- Representation of the pending test in the narrative section -->
                         <td>Pending</td>
