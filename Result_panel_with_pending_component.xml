@@ -59,7 +59,7 @@
                         <statusCode code = "completed"/>
                         <effectiveTime value = "20120806"/>
                         <!-- Represents a completed result reported as structured data -->
-                        <value xsi:type = "PQ" unit = "g/dl " value = "14.2"/>
+                        <value xsi:type = "PQ" unit = "g/dL " value = "14.2"/>
                         <interpretationCode code = "N" codeSystem = "2.16.840.1.113883.5.83"/>
                     </observation>
                 </component>
@@ -67,7 +67,7 @@
                     <observation classCode = "OBS" moodCode = "EVN">
                         <templateId root = "2.16.840.1.113883.10.20.22.4.2"/>
                         <id root = "68762391-bfa5-4dfa-9f6f-d37109a97d19"/>
-                        <code xsi:type = "CE" code = "6460-0" displayName = "Sputum Culture" codeSystem = "2.16.840.1.113883.6.1" codeSystemName = "LOINC"/>
+                        <code xsi:type = "CE" code = "804-5" displayName = "Leukocytes [#/​volume] in Blood by Manual count" codeSystem = "2.16.840.1.113883.6.1" codeSystemName = "LOINC"/>
                         <text>
                             <reference value = "#result5"/>
                         </text>
