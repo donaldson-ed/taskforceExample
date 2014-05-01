@@ -14,15 +14,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>CBC W Auto Differential panel in Blood</td>
+                        <td>CBC with Ordered Manual Differential panel - Blood</td>
                         <td/>
-                        <td>8/6/2012</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <content ID = "result1">HGB, [LOINC: 30313-1]</content>
-                        </td>
-                        <td>14.2</td>
                         <td>8/6/2012</td>
                     </tr>
                     <tr>
@@ -40,29 +33,9 @@
             <organizer classCode = "BATTERY" moodCode = "EVN">
                 <templateId root = "2.16.840.1.113883.10.20.22.4.1"/>
                 <id root = "7d5a02b0-67a4-11db-bd13-0800200c9a66"/>
-                <code xsi:type = "CE" code = "57021-8" displayName = "CBC W Auto Differential panel in Blood" codeSystemName = "LOINC" codeSystem = "2.16.840.1.113883.6.1"/>
+                <code xsi:type="CE" code="57782-5" displayName = "CBC with Ordered Manual Differential panel - Blood" codeSystemName = "LOINC" codeSystem = "2.16.840.1.113883.6.1"/>
                         <!-- Status is active since all components are not complete -->
                 <statusCode code = "active"/>
-                <component>
-                    <observation classCode = "OBS" moodCode = "EVN">
-                        <templateId root = "2.16.840.1.113883.10.20.22.4.2"/>
-                        <id root = "107c2dc0-67a5-11db-bd13-0800200c9a66"/>
-                        <code displayName = "Hemoglobin [Mass/volume] in Arterial blood" code = "30313-1" codeSystem = "2.16.840.1.113883.6.1">
-                            <originalText>
-                                <reference value = "#result1"/>
-                            </originalText>
-                        </code>
-                        <text>
-                            <reference value = "#result1"/>
-                        </text>
-                        <!-- Status of this test is completed -->
-                        <statusCode code = "completed"/>
-                        <effectiveTime value = "20120806"/>
-                        <!-- Represents a completed result reported as structured data -->
-                        <value xsi:type = "PQ" unit = "g/dL " value = "14.2"/>
-                        <interpretationCode code = "N" codeSystem = "2.16.840.1.113883.5.83"/>
-                    </observation>
-                </component>
                 <component>
                     <observation classCode = "OBS" moodCode = "EVN">
                         <templateId root = "2.16.840.1.113883.10.20.22.4.2"/>
@@ -74,13 +47,12 @@
                         <!-- Status of this test is active -->
                         <statusCode code = "active"/>
                         <effectiveTime value = "20120806"/>
-                        <!-- Representing the pending result as NAV = temporarily unavailable. 
-                             The information is not available, but is expected to be available later.-->
-                        <value nullFlavor="NAV"/>
-                        <!-- This is instead of reprsenting the Pending result as an unstructured string which
-                             can be misconstrued as a value. 
-                             <value xsi:type = "ST">Pending</value> -->
-                    </observation>
+                        <!-- This should represent what the EHR or other system received from the lab -->
+                        <!-- The more common scenario is the result is not present -->
+                        <!-- The task force created this example becasue it came up during certification testing-->
+                        <!-- We do not believe this is a common scenario -->
+                        <value nullFlavor="NA"/>
+                        </observation>
                 </component>
             </organizer>
         </entry>
