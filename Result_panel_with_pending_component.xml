@@ -51,7 +51,7 @@
                         <!-- The more common scenario is the result is not present -->
                         <!-- The task force created this example becasue it came up during certification testing-->
                         <!-- We do not believe this is a common scenario -->
-                        <value nullFlavor="NA"/>
+                        <value xsi:type="PQ" nullFlavor="NA"/>
                         </observation>
                 </component>
             </organizer>
