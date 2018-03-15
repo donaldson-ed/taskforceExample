@@ -1,5 +1,6 @@
+
 <!-- recordTarget example from C-CDA-Examples/Header/Patient Demographic Information 
-    added multiple Addresses
+    added multiple home addresses
 -->
 <recordTarget>
     <patientRole>
@@ -12,18 +13,11 @@
             <state>VT</state>
             <postalCode>05455</postalCode>
             <country>US</country>
-            <!-- It is permissible to add a useablePeriod with a <low> element to indicate current residence -->
-        </addr>
-        <addr use="H">
-            <streetAddressLine>1141 W MAIN AVE</streetAddressLine>
-            <city>CHICAGO</city>
-            <state>IL</state>
-            <postalCode>60613</postalCode>
-            <country>US</country>
             <useablePeriod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
-                <low value="20070513"/>
-                <high value="20110130"/>
+                <low value="20110822"/>
             </useablePeriod>
+            <!-- It is permissible to omit a low element to indicate current residence -->
+            <!-- It is permissible to omit a high element or use nullFlavor='NA' -->
         </addr>
         <addr use="H">
             <streetAddressLine>191 S OAK AVE</streetAddressLine>
@@ -34,6 +28,17 @@
             <useablePeriod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
                 <low value="20110131"/>
                 <high value="20110821"/>
+            </useablePeriod>
+        </addr>
+        <addr use="H">
+            <streetAddressLine>1141 W MAIN AVE</streetAddressLine>
+            <city>CHICAGO</city>
+            <state>IL</state>
+            <postalCode>60613</postalCode>
+            <country>US</country>
+            <useablePeriod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
+                <low value="20070513"/>
+                <high value="20110130"/>
             </useablePeriod>
         </addr>
         <telecom value="tel:+1(565)867-5309" use="MC"/>
