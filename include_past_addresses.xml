@@ -22,7 +22,7 @@
             <country>US</country>
             <useablePeriod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
                 <low value="20070513"/>
-                <high value="20101224"/>
+                <high value="20110130"/>
             </useablePeriod>
         </addr>
         <addr use="H">
