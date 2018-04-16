@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <component>
+            <section>
+                <!-- Procedures Section (entries required) (V2) -->
+                <templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09"/>
+                <templateId root="2.16.840.1.113883.10.20.22.2.7.1"/>
+                <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF PROCEDURES"/>
+                <title>PROCEDURES</title>
+                <text>
+                    <table border="1" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Procedure</th>
+                                <th>Date</th>
+                                <th>Physician</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td ID="Proc1">Appendectomy</td>
+                                <td>January 25, 2018</td>
+                                <td>Dr. Surgeon</td>
+                                <td>Good Health Hospitals</td>
+                            </tr>
+                            <tr>
+                                <td /> <!-- empty cell to indent note contents underneath previous row -->
+                                <td ID="Proc1Note" colspan="3">
+                                    <paragraph>Operative Note - Dr. Surgeon - 01/25/2018</paragraph>
+                                    <paragraph>Anesthesia Evaluation: Patient repositioned with arms extended on arm boards, 
+                                        arm straps applied; anesthetic effect assessed by anesthesiologist; electro-surgical pad 
+                                        placed under buttocks</paragraph>
+                                    <paragraph>Operation started: Patient’s appendix was removed</paragraph>
+                                    <paragraph>End of Operation: Skin closure completed, antiseptic solution and top dressing applied and secured</paragraph>
+                                    <paragraph>Unit Transfer: immediate post-op care done, arm straps and electrosurgical 
+                                        pad removed, kept warm with blankets, transferred to RR bed, ensured safety, 
+                                        brought to recovery room per RR bed</paragraph>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </text>
+                <entry typeCode="DRIV">
+                    <procedure classCode="PROC" moodCode="EVN">
+                        <!-- ******************** Procedure activity procedure ******************** -->
+                        <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+                        <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+                        <id root="d68b7e32-7810-4f5b-9cc2-acd54b0fd85d"/>
+                        <code code="80146002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Appendectomy" />
+                        <!-- Start of Note Activity as related to an existing procedure by means of an entryRelationship -->
+                        <entryRelationship typeCode="COMP">
+                            <act classCode="ACT" moodCode="EVN">
+                                <templateId root="2.16.840.1.113883.10.20.22.4.202" extension="2016-11-01"/>
+                                <code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note">
+                                    <translation code="28570-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Procedure note" />
+                                </code>
+                                <text>
+                                    <reference value="#Proc1Note" />
+                                </text>
+                                <statusCode code="completed"/>
+                                <!-- Clinically-relevant time of the note -->
+                                <effectiveTime value="20180125" />
+                                <!-- Author Participation -->
+                                <author>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.119" />
+                                    <!-- Time note was actually written -->
+                                    <time value="20180127083215-0500" />
+                                    <assignedAuthor>
+                                        <templateId root="2.16.840.1.113883.3.3251.1.3"/>
+                                        <id extension="1166245592" root="2.16.840.1.113883.4.6"/>
+                                        <code code="200000000X" codeSystem="2.16.840.1.113883.6.101"/>
+                                        <addr use="WP">
+                                            <streetAddressLine>132 Main Street</streetAddressLine>
+                                            <city>Philadelphia</city>
+                                            <state>PA</state>
+                                            <postalCode>12345</postalCode>
+                                        </addr>
+                                        <telecom value="mailto:surgeon@gmail.com"/>
+                                        <assignedPerson>
+                                            <name>
+                                                <prefix>Dr</prefix>
+                                                <family>Surgeon</family>
+                                                <given>George</given>
+                                            </name>
+                                        </assignedPerson>
+                                    </assignedAuthor>
+                                </author>
+                                <!-- Reference to encounter -->
+                                <entryRelationship typeCode="COMP" inversionInd="true">
+                                    <encounter classCode="ENC" moodCode="EVN">
+                                        <!-- Encounter ID matches an encounter in the Encounters Section -->
+                                        <id root="1.2.3.4" extension="abc" />
+                                    </encounter>
+                                </entryRelationship>
+                            </act>
+                        </entryRelationship>
+                    </procedure>
+                </entry>
+            </section>
+        </component>
