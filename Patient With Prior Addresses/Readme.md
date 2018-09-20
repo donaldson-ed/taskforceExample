@@ -1,21 +1,21 @@
 ##Approval Status
 
-Approval Status: Pending
-Example Task Force: 3/6/2018
-SDWG:
+* Approval Status: Pending
+* Example Task Force: 3/6/2018
+* SDWG:
 
 ###C-CDA 2.1 Example:
 
-recordTarget/PatientRole/addr[2]
-recordTarget/PatientRole/addr[3]
+* recordTarget/PatientRole/addr[2]
+* recordTarget/PatientRole/addr[3]
 
 ###Reference to full CDA sample:
 
-PatientRole examples
+* N/A
 
 ###Validation location
 
-SITE
+* https://sitenv.org/sandbox-ccda/ccda-validator
 
 ###Comments
 
