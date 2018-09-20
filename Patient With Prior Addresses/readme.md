@@ -23,7 +23,7 @@ This example illustrates how to structure multiple past addresses for a patient
 
 ###Custodian
 
-Ed Donaldson, donaldson.ed@gmail.com (GitHub: brettmarquard) 
+Ed Donaldson, donaldson.ed@gmail.com (GitHub: donaldson-ed) 
 
 ###Keywords
 
